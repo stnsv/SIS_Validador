@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Documento com Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .data {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Fatec_logo.png/800px-Fatec_logo.png" width="200" alt="Imagem Exemplo"><br>
+  <div class="data" id="dataAtual"></div>
+
+  <script>
+    const data = new Date();
+    const dataFormatada = data.toLocaleDateString('pt-BR');
+    document.getElementById("dataAtual").textContent = `Data de acesso: ${dataFormatada}`;
+  </script>
+</body>
+</html>
