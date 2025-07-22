@@ -2,27 +2,42 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Documento com Data</title>
+  <title>Validador Fatec - Data Atual</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      margin-top: 50px;
+      margin-top: 80px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      background: white;
+      display: inline-block;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     .data {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: bold;
-      margin-top: 20px;
+      color: #333;
+      margin-top: 25px;
+    }
+    img {
+      max-width: 90%;
+      height: auto;
     }
   </style>
 </head>
 <body>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Fatec_logo.png/800px-Fatec_logo.png" width="200" alt="Imagem Exemplo"><br>
-  <div class="data" id="dataAtual"></div>
+  <div class="container">
+    <img src="sis_validador1.png" alt="Documento SIS Validador">
+    <div class="data" id="dataAtual">Carregando data...</div>
+  </div>
 
   <script>
-    const data = new Date();
-    const dataFormatada = data.toLocaleDateString('pt-BR');
+    const hoje = new Date();
+    const dataFormatada = hoje.toLocaleDateString('pt-BR');
     document.getElementById("dataAtual").textContent = `Data de acesso: ${dataFormatada}`;
   </script>
 </body>
